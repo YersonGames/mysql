@@ -1,4 +1,4 @@
---crear base de datos libreria
+--crear y usar base de datos libreria
 create database libreria;
 
 use libreria;
@@ -18,7 +18,7 @@ create table libreria.libro(
     id_autor int,
     precio int,
     stock int,
-    FOREING key(id_autor)references autor(id_autor)
+    FOREIGN key(id_autor)references autor(id_autor)
     );
 
 --agregar 3 autores
@@ -34,13 +34,13 @@ select * from libreria.autor;
 select nombre, nacionalidad from libreria.autor;
 
 --consultar por todos los libros
-select * from libreria.libro
+select * from libreria.libro;
 
 --consultar solo nombre autores
-select nombre from libreria.autor
+select nombre from libreria.autor;
 
 --consultar solo nombre libros
-select titulo from libreria.libro
+select titulo from libreria.libro;
 
 --buscar libros con stock mayor o igual 5
 select * from libreria.libro where stock >= 5;
