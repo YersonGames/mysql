@@ -46,4 +46,4 @@ select titulo from libreria.libro
 select * from libreria.libro where stock >= 5;
 
 --buscar libros con precio menos o igual 15000
-select * from libreria.libro where precio <= 15000;a
+select * from libreria.libro where precio <= 15000;
