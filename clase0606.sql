@@ -47,3 +47,21 @@ select * from libreria.libro where stock >= 5;
 
 --buscar libros con precio menos o igual 15000
 select * from libreria.libro where precio <= 15000;
+
+create table libreria.prestamo(
+    id_prestamo int AUTO_INCREMENT primary key,
+    nombre_cliente varchar(100),
+    fecha date,
+    id_libro int,
+    FOREIGN key(id_libro)references libreria.libro(id_libro)
+);
+
+insert into libreria.prestamo(nombre_cliente,id_libro,fecha) values ('Samuel Salamanca',1,'2025-08-31');
+insert into libreria.prestamo(nombre_cliente,id_libro,fecha) values ('Manuel Rodriguez',2,'2025-08-23');
+insert into libreria.prestamo(nombre_cliente,id_libro,fecha) values ('Cesar jsjsjs',3,'2025-08-22');
+
+select nombre,titulo from libreria.autor,libreria.libro
+where libreria.libro.id_autor = libreria.autor.id_autor;
+
+select id_prestamo,nombre_cliente,titulo from libreria.prestamo,libreria.libro
+where libreria.prestamo.id_libro = libreria.libro.id_libro;
