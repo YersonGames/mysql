@@ -76,4 +76,3 @@ create table libreria.lector(
 insert into libreria.lector(nombre,email,celular) values ("Carla Bravo","carlabravo@gmail.com",98461742);
 insert into libreria.lector(nombre,email,celular) values ("Felipe Zapata","felipezapata@gmail.com",902758123);
 insert into libreria.lector(nombre,email,celular) values ("Maria Sanchez","mariasanchez@gmail.com",967834571);
-a
