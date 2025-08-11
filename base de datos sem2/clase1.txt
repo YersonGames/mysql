@@ -1,0 +1,49 @@
+Repaso:
+
+-Tabla de converion de datos (buscar la wea)
+    Bit: La unidad más pequeña de información, puede ser 0 o 1.
+    Byte: Equivale a 8 bits y puede representar un carácter, como una letra o un número.
+    Kilobyte (KB): 1024 bytes.
+    Megabyte (MB): 1024 kilobytes (KB).
+    Gigabyte (GB): 1024 megabytes (MB).
+    Terabyte (TB): 1024 gigabytes (GB).
+    Petabyte (PB): 1024 terabytes (TB).
+    Exabyte (EB): 1024 petabytes (PB).
+    Zettabyte (ZB): 1024 exabytes (EB).
+    Yottabyte (YB): 1024 zettabytes (ZB). 
+
+-Big data
+    En el mundo, la cantidad de bytes almacenados es enorme y sigue creciendo a un ritmo acelerado. En 2024, se estima que la cantidad total de datos generados,
+    capturados, copiados y consumidos a nivel mundial asciende a 149 zettabytes.
+
+-Bases de datos Relacionales:
+    Dentro de los principales motores de base de datos se encuentran Oracle, MySQL, Microsoft SQL Server, PostgreSQL y SQLite.
+
+    Sistema > SABD > Base de datos
+
+SQL: Interpretado o compilado?
+    SQL es tipicamente interpretado, no compilado. Aunque algunos sistemas de gestion de bases de datos pueden compilar partes del cdigo SQL 
+    para mejorar el rendimiento.
+
+    Interpretado: el sistema interpreta cada linea osea la traduce en bajo nivel para poder leerlo
+    Compilado: se compila a bajo nivel
+
+Comentarios:
+    -- Comentario
+
+    /*
+    Comentario de multiples lineas
+    aaaa
+    */
+
+Tipos de Datos en SQL:
+    tinyint (1 Byte): Entero muy pequeño (-128 a 127)
+    smallint (2 Bytes): Entero pequeño
+    mediumint (3 Bytes): Entero mediano
+    int o integer (4 Bytes): Entero estandar
+    bigint (8 Bytes): Entero muy grande
+
+-Tipos numericos
+    Float (Aprox. simple): Numeros decimales, menos preciso
+    Double (aprox. doble): mayor precision
+    decimal o numeric ()
