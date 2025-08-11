@@ -46,3 +46,4 @@ WHERE criterio de busqueda;
 DELETE nombre_tabla WHERE criterio de busqueda;
 -- eliminar registros especificos 
 DELETE nombre_tabla WHERE criterio de busqueda;
+a
