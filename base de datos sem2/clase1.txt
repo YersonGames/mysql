@@ -47,3 +47,4 @@ Tipos de Datos en SQL:
     Float (Aprox. simple): Numeros decimales, menos preciso
     Double (aprox. doble): mayor precision
     decimal o numeric ()
+    a
