@@ -47,3 +47,12 @@ Tipos de Datos en SQL:
     Float (Aprox. simple): Numeros decimales, menos preciso
     Double (aprox. doble): mayor precision
     decimal o numeric ()
+
+#Añadir Tabla
+alter table nombre_tabla add nombre_columna tipo_dato [restricciones]
+
+#modificar una columna existente
+alter table nombre_tabla alter column nombre_columna tipo_dato [restricciones]
+
+#eliminar columna
+alter table nombre_tabla drop column nombre_columna
