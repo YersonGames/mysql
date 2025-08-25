@@ -44,3 +44,7 @@ update personal set salario = salario * 1.1, departamento = "Ventas Senior"
 where departamento = "Ventas" and salario > 700000;
 
 update productos set precio = precio * 1.05;
+
+delete from personal where id = 3;
+delete from personal where salario > 600000 and departamento = "Marketing";
+delete from personal;
