@@ -30,3 +30,4 @@ values("Ana","Martin",620000,"Ventas");
 
 -- insertar sin especificar
 insert into personal values(5,"Pedro","Sanchez","ps@gmail.com",900000,"Gerencia","2025-08-21");
+a
