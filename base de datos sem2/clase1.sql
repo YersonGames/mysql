@@ -2,9 +2,12 @@ create database empresa;
 use empresa;
 
 create table personal(
-    id int primary key,
+    id int auto_increment primary key,
     nombre varchar(100) not null,
+    apellido varchar(100) not null,    
     email varchar(100) unique,
+    salario int,
+    departamento varchar(100),
     fecharegistro date
 );
 
@@ -16,18 +19,28 @@ create table productos(
     fechacreacion datetime default current_timestamp
 );
 
-alter table personal add telefono varchar(20);
-alter table personal drop column fecharegistro;
-
-drop table productos;
+-- alter table personal add telefono varchar(20);
+-- alter table personal drop column fecharegistro;
+-- drop table productos;
 
 insert into personal(nombre, apellido,salario,departamento) values("Juan","Perez",700000,"Ventas");
 
 insert into personal(nombre, apellido,salario,departamento)
 values("Maria","Garcia",650000,"Marketing"),
-values("Carlos","Lopez",680000,"IT"),
-values("Ana","Martin",620000,"Ventas");
+("Carlos","Lopez",680000,"IT"),
+("Ana","Martin",620000,"Ventas");
 
 -- insertar sin especificar
 insert into personal values(5,"Pedro","Sanchez","ps@gmail.com",900000,"Gerencia","2025-08-21");
-a
+
+insert into productos
+values(1,"Cuaderno",4500,20,"2025-08-21"),
+(2,"Lapiz",2800,35,"2024-09-11"),
+(3,"Goma",1200,15,"2023-10-31");
+
+update personal set salario = 750000 where id = 1;
+
+update personal set salario = salario * 1.1, departamento = "Ventas Senior"
+where departamento = "Ventas" and salario > 700000;
+
+update productos set precio = precio * 1.05;
