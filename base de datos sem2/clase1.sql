@@ -48,3 +48,5 @@ update productos set precio = precio * 1.05;
 delete from personal where id = 3;
 delete from personal where salario > 600000 and departamento = "Marketing";
 delete from personal;
+
+select * from personal;
