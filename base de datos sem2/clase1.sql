@@ -45,8 +45,18 @@ where departamento = "Ventas" and salario > 700000;
 
 update productos set precio = precio * 1.05;
 
-delete from personal where id = 3;
-delete from personal where salario > 600000 and departamento = "Marketing";
-delete from personal;
+-- delete from personal where id = 3;
+-- delete from personal where salario > 600000 and departamento = "Marketing";
+-- delete from personal;
 
 select * from personal;
+select nombre, email from personal;
+select * from personal where departamento = "Ventas";
+
+select * from personal where nombre like "A%";
+select * from personal where departamento in("Ventas","IT");
+
+select * from personal order by nombre asc;
+select * from personal order by nombre desc;
+
+select distinct departamento from personal;
