@@ -60,4 +60,3 @@ select * from personal order by nombre asc;
 select * from personal order by nombre desc;
 
 select distinct departamento from personal;
-a
