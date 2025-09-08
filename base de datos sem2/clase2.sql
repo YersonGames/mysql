@@ -40,4 +40,3 @@ join information_schema.table_constraints as tc
 where tc.constraint_type = "FOREIGN KEY"
       and kcu.table_schema = "empresa"
       and kcu.table_name = "personal";
-      a
