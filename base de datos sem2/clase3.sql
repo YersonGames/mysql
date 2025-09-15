@@ -50,3 +50,4 @@ create view empleados_detalle as
             end as nivel_salario
         from empleados e
         inner join departamentos d on e.departamento_id = d.id;
+        
