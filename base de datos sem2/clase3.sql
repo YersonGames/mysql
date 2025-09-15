@@ -50,4 +50,17 @@ create view empleados_detalle as
             end as nivel_salario
         from empleados e
         inner join departamentos d on e.departamento_id = d.id;
-        
+
+select * from empleados_alto_salario;
+select * from empleados_nuevos;
+select * from empleados_detalle;
+
+insert into empleados_alto_salario(id,nombre,salario) values(200,"Juan Perez",1550000);
+
+update empleados_alto_salario set salario = salario*1.1
+where id = 10;
+
+delete from empleados_alto_salario
+where salario < 1100000;
+
+drop view empleados_alto_salario;
