@@ -6,7 +6,7 @@ create table empleados(
     nombre varchar(100),
     apellido varchar(100),
     departamento varchar(50),
-    fecha_contratacion date
+    fecha_contratacion datea
 );
 
 -- creacion indice no unico:
