@@ -7,6 +7,31 @@ https://virtual.inacap.cl/repositorio/TI3022_TFL/U2/TI3022_U2_S6/content/index.p
 cast(): convierte un valor da in tipo de dato diferente | Ejemplo: select cast('123' as unsigned); |Result: 123 (como numero)
 cast: Convierte a un numero a una cadena | Ejemplo: select cast(123 as char)| Result: 123 (como texto)
 
+Funciones fecha y hora:
+now(): devuelve la fecha y hora actual; select now();
+curdate(): devuelve la fecha actual
+year(): extrae el anio de una fecha: select year("2025-08-10") = 2025
+month(): extrae el mes de una fecha
+day(): extrae el dia de una fecha
+datediff(): calcula de diferencia de dias entre2 fechas: datediff(date,date)
+
+Funciones numericas:
+abs(): devuelve un valor absolute:: select abs(-32) = 32
+round(): redondea un numero: round(numero,cantidad_decimales)
+ceil(): redondea hacia arriba al numero entero mas cercano
+floor(): redondea hacia abajo al numero entero mas cercano
+mod(): devuelve elr esto de una division: mod(10,3) = 10/3=9 sobra:1
+power(): eleva el numero a potencia: power(2,3)=8
+
+Funciones en cadena:
+concat(): concatena dos a mas cadenas
+upper(): convieret una cadenas a mayusculas
+lower(): convierte una cadena a minusculas
+substring(): extrae una subcadena: substring('MYSQL',1,2)='My'
+length(): devuelve la longitud de una cadena: length(MYSQL)=5
+trim(): elimina los espacios al inicio y final
+
+
 */
 create database empresa;
 use empresa;
@@ -36,5 +61,6 @@ select concat(upper(trim(nombre))," ",lower(apellido)) as nombre_completo from e
 select nombre,round(salario,1) as salario_redondeado from empleados;
 
 select nombre, year(fecha_contratacion) as contratacion from empleados;
+
 
 select * from empleados where month(fecha_contratacion) = "03";
