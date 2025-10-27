@@ -35,7 +35,6 @@ trim(): elimina los espacios al inicio y final
 */
 create database empresa;
 use empresa;
-a
 
 
 create table empleados(
