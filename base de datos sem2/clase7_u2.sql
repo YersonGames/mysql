@@ -14,6 +14,14 @@ year(): extrae el anio de una fecha: select year("2025-08-10") = 2025
 month(): extrae el mes de una fecha
 day(): extrae el dia de una fecha
 datediff(): calcula de diferencia de dias entre2 fechas: datediff(date,date)
+date_format(): Cambiar formato de la fecha: date_format(fecha,"%d-%m-%y")
+
+%d = 01-31
+%D = 1st,2nd
+%m = 01,02
+%M = Enero, Febrero
+%y = muestra solo los ultimos 2 digitos 2025 = 25
+%Y = 2024,2025
 
 Funciones numericas:
 abs(): devuelve un valor absolute:: select abs(-32) = 32

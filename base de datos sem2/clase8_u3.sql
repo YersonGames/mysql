@@ -98,3 +98,9 @@ select producto,round(cast(precio as decimal(10,2))*cast(cantidad as signed),2) 
 -- Filtrar ventas entre el 05 y 15 de octubre 2025
 select * from ventas where cast(fecha_venta as date) > "2025-10-05" and cast(fecha_venta as date) < "2025-10-15";
 select * from ventas where cast(fecha_venta as date) between "2025-10-05" and "2025-10-15";
+
+-- Mostrar nombre del producto y precio de menor a mayor
+select producto,precio from ventas order by cast(precio as decimal(10,2)) asc;
+
+-- Mostrar producto, precio con $, cantidad y la fecha con formato Dia-Mes-Año
+select producto, concat("$",precio) as precio,cantidad, date_format(cast(fecha_venta as date),"%d/%m/%Y") as fecha_formato from ventas;
