@@ -147,3 +147,8 @@ select cliente, sum(total_pedido) as gasto_total
 from pedidos
 group by cliente
 having gasto_total > 1000000;
+
+select vendedor, sum(precio) as venta_total
+from ventas
+group by vendedor
+having venta_total > 500000;
