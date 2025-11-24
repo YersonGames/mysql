@@ -148,6 +148,7 @@ from pedidos
 group by cliente
 having gasto_total > 1000000;
 
+-- seleccionar los vendedores que han vendido mas de 500000 en total
 select vendedor, sum(precio) as venta_total
 from ventas
 group by vendedor
