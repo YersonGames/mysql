@@ -153,3 +153,4 @@ select vendedor, sum(precio) as venta_total
 from ventas
 group by vendedor
 having venta_total > 500000;
+a
