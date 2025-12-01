@@ -149,8 +149,33 @@ group by cliente
 having gasto_total > 1000000;
 
 -- seleccionar los vendedores que han vendido mas de 500000 en total
-select vendedor, sum(precio) as venta_total
+select vendedor, sum(precio*cantidad) as venta_total
 from ventas
 group by vendedor
 having venta_total > 500000;
-a
+
+-- calcular el salario promnedio por departamento
+select departamento, count(*) as num_empleados, avg(sueldo) as sueldo_promedio
+from personal
+group by departamento
+having num_empleados > 3;
+
+-- Mostrar total de ventas por categoria de producto 2024
+select categoria, sum(precio*cantidad) as ventas_totales
+from ventas
+where year(fecha) = "2024"
+group by categoria
+order by ventas_totales desc;
+
+-- mostrar el sueldo minimo, maximo y promedio por departamento y el total de personas
+select departamento, min(sueldo) as sueldo_minimo, max(sueldo) as sueldo_maximo, avg(sueldo) as sueldo_promedio, count(*) as total_personas
+from personal
+where year(fecha_ingreso) > "2020"
+group by departamento;
+
+-- Agrupar ventas por mes y categoria, mostrando la cantidad total vendida y el ingreso total con mas de 100.000
+select year(fecha) as año, month(fecha) as mes, categoria, sum(cantidad) as cantidad_total, sum(precio*cantidad) as ingreso_total
+from ventas
+group by año,mes,categoria
+having ingreso_total > 100000
+order by año,mes,ingreso_total;
